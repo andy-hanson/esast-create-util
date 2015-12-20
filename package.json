@@ -1,0 +1,29 @@
+{
+	"name": "esast-create-util",
+	"version": "0.0.0",
+	"files": ["lib", "src"],
+	"license": "Unlicense",
+	"repository": "esast/esast-create-util",
+	"typings": "lib",
+	"scripts": {
+		"build": "gulp build-src",
+		"watch": "gulp watch-src",
+		"build-test": "gulp build-test",
+		"watch-test": "gulp watch-test",
+		"test": "mocha compiled-test/*.js",
+		"lint": "tslint src/*.ts test/*.ts",
+		"TODO-doc": "typedoc src --out doc --readme readme.md",
+		"TODO-all": "npm run build && npm run build-test && npm run lint && npm run test && npm run doc"
+	},
+	"dependencies": {
+		"esast": "esast/esast",
+		"op": "esast/op"
+	},
+	"devDependencies": {
+		"gulp": "3.9.0",
+		"gulp-typescript-esast": "esast/gulp-typescript-esast",
+		"tslint": "3.2.2-dev.1",
+		"tslint-config-esast": "esast/tslint-config-esast",
+		"typedoc": "0.3.12"
+	}
+}
